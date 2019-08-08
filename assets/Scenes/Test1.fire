@@ -17,7 +17,7 @@
         "__id__": 2
       },
       {
-        "__id__": 22
+        "__id__": 23
       }
     ],
     "_active": false,
@@ -86,6 +86,9 @@
     "_components": [
       {
         "__id__": 21
+      },
+      {
+        "__id__": 22
       }
     ],
     "_prefab": null,
@@ -928,6 +931,16 @@
     "_id": "ccNpORkEtOiLSkjUOdhzCX"
   },
   {
+    "__type__": "dd1ccI9qHBLoqkk0WijUO36",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "_id": "2eiGm/UGFFqZY7UmngiZbG"
+  },
+  {
     "__type__": "cc.Node",
     "_name": "control",
     "_objFlags": 0,
@@ -939,7 +952,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 23
+        "__id__": 24
       }
     ],
     "_prefab": null,
@@ -991,7 +1004,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 22
+      "__id__": 23
     },
     "_enabled": true,
     "scroll": {

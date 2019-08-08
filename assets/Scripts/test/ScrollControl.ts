@@ -62,17 +62,14 @@ export default class NewClass extends cc.Component {
 
     update (dt) {
         this.timeFrame += dt;
-        console.log("timeFrame is ",this.timeFrame);
         // 帧时间小于0.2不执行update提高性能
         if(this.timeFrame < this.timeInterval) {
             return;
         }
-        console.log("=====>>>>");
         this.timeFrame = 0;
         let isDown: boolean = this.scroll.content.y > this.lastY;
         let offset: number = -this.spawnCount * (this.itemPrefab.data.height + this.spacing);
         // 检查每一个节点的y坐标如果超出上边界就讲该节点放到后面去替换预制体中的贴图或者标签文字
-        console.log("isDown is ",isDown);
         for(let i = 0; i < this.items.length; i++) {
             // 获得每个节点的坐标
             let item: cc.Node = this.items[i];
@@ -86,7 +83,6 @@ export default class NewClass extends cc.Component {
                 // 更新最后一个节点的属性
                 item.getComponent("Item").setItemId(item.getComponent("Item").itemId + this.items.length);
                 // item.getComponent(cc.Label).string = num.toString();
-                console.log("itemId is ",item.getComponent("Item").itemId);
                 item.getComponent("Item").setScore("" + item.getComponent("Item").itemId);
                 if(i % 2 === 0) {
                     item.getComponent("Item").setAvatar("1.jpg");

@@ -1,54 +1,77 @@
 {
   "ver": "1.0.14",
-  "uuid": "5b6f56e4-12c3-4837-ada3-f5d95b64da8c",
+  "uuid": "15e57817-1ee6-42ac-b133-4ec7f1e8b1fd",
   "scaleFactor": 1,
-  "boneCount": 65,
+  "boneCount": 52,
   "precomputeJointMatrix": false,
   "animationFrameRate": 30,
   "subMetas": {
     "buffer.bin": {
       "ver": "1.0.0",
-      "uuid": "682c47d1-8262-44a5-854a-fb89f502009e",
+      "uuid": "52382fc3-eabb-4625-9797-f2a7cf1b5f5f",
       "subMetas": {}
     },
-    "Kachujin.mesh": {
+    "Beta_Joints.mesh": {
       "ver": "1.0.1",
-      "uuid": "b219013f-ccfc-4e95-b2e7-ad25ebe237b3",
-      "verts": 7665,
-      "tris": 12610,
+      "uuid": "7eb3279b-1da7-433b-bfe7-8c4f5075f991",
+      "verts": 12473,
+      "tris": 20840,
       "submeshes": 1,
       "minPos": {
-        "x": -0.969268798828125,
-        "y": 0.0051129418425262,
-        "z": -0.217174977064133
+        "x": -0.883466839790344,
+        "y": -0.00323115638457239,
+        "z": -0.124687545001507
       },
       "maxPos": {
-        "x": 0.968413889408112,
-        "y": 2.08256077766418,
-        "z": 0.176307782530785
+        "x": 0.883466958999634,
+        "y": 1.59360826015472,
+        "z": 0.130236849188805
       },
       "subMetas": {}
     },
-    "women-0.skeleton": {
+    "Beta_Surface.mesh": {
       "ver": "1.0.1",
-      "uuid": "f07b1715-ba31-455e-97a8-765e5cb8eeb9",
+      "uuid": "5bfac7f2-dcc8-4017-a45a-68e9e1920817",
+      "verts": 15901,
+      "tris": 28272,
+      "submeshes": 1,
+      "minPos": {
+        "x": -0.902565956115723,
+        "y": -0.00320193218067288,
+        "z": -0.14373941719532
+      },
+      "maxPos": {
+        "x": 0.902566075325012,
+        "y": 1.80604910850525,
+        "z": 0.176958158612251
+      },
+      "subMetas": {}
+    },
+    "model-0.skeleton": {
+      "ver": "1.0.1",
+      "uuid": "4672095e-806e-47d7-b762-4416eeacc526",
+      "subMetas": {}
+    },
+    "model-1.skeleton": {
+      "ver": "1.0.1",
+      "uuid": "07b241dd-64dc-47c7-9068-b500ce28d6b6",
       "subMetas": {}
     },
     "mixamo.com.sac": {
       "ver": "1.0.1",
-      "uuid": "1772877e-0265-4916-bde7-305f27e65a72",
-      "modelUuid": "5b6f56e4-12c3-4837-ada3-f5d95b64da8c",
+      "uuid": "6f4ef3c5-bd9a-4b31-ad44-40b1d3c70784",
+      "modelUuid": "15e57817-1ee6-42ac-b133-4ec7f1e8b1fd",
       "animationID": 0,
       "name": "mixamo.com",
-      "maxFrameCount": 437,
-      "totalFrameCount": 22558,
-      "duration": 18.16666603088379,
+      "maxFrameCount": 379,
+      "totalFrameCount": 17264,
+      "duration": 15.75,
       "animationFrameRate": 30,
       "subMetas": {}
     },
-    "women.prefab": {
+    "model.prefab": {
       "ver": "1.1.0",
-      "uuid": "5b704149-e291-4adc-9839-f5bbedaa9ed9",
+      "uuid": "488484ee-9705-406e-9f64-cfe5ded1062d",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,
       "readonly": true,
@@ -150,11 +173,18 @@
       ],
       "subMetas": {}
     },
-    "kachujin_MAT.mtl": {
+    "Beta_Joints_MAT.mtl": {
       "ver": "1.0.2",
-      "uuid": "045a5d34-dc24-436e-b66b-c15b973c820d",
-      "dataAsSubAsset": "{\n  \"__type__\": \"cc.Material\",\n  \"_name\": \"\",\n  \"_objFlags\": 0,\n  \"_native\": \"\",\n  \"_effectAsset\": {\n    \"__uuid__\": \"abc2cb62-7852-4525-a90d-d474487b88f2\"\n  },\n  \"_defines\": {\n    \"USE_DIFFUSE_TEXTURE\": true,\n    \"USE_SPECULAR_TEXTURE\": true,\n    \"USE_NORMAL_TEXTURE\": true,\n    \"USE_SPECULAR\": true\n  },\n  \"_props\": {\n    \"normalTexture\": {\n      \"__uuid__\": \"2633b547-fb10-4fd9-bea6-3afa2b5e8b9d\"\n    },\n    \"diffuseColor\": {\n      \"__type__\": \"cc.Color\",\n      \"r\": 204,\n      \"g\": 204,\n      \"b\": 204,\n      \"a\": 0\n    },\n    \"diffuseTexture\": {\n      \"__uuid__\": \"e7825835-330c-4d28-ac9b-f55543a71024\"\n    },\n    \"specularTexture\": {\n      \"__uuid__\": \"3fb6eb65-175d-4c5a-abe6-d4df0f04aedb\"\n    }\n  }\n}",
-      "name": "kachujin_MAT.mtl",
+      "uuid": "9ebf4b51-7791-4551-b44f-302368f10e9b",
+      "dataAsSubAsset": null,
+      "name": "Beta_Joints_MAT.mtl",
+      "subMetas": {}
+    },
+    "asdf1:Beta_HighLimbsGeoSG2.mtl": {
+      "ver": "1.0.2",
+      "uuid": "169e2e13-b0f4-44d1-b244-6853c6e968b9",
+      "dataAsSubAsset": null,
+      "name": "asdf1:Beta_HighLimbsGeoSG2.mtl",
       "subMetas": {}
     }
   }
