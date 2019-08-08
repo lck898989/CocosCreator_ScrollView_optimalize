@@ -1,0 +1,161 @@
+{
+  "ver": "1.0.14",
+  "uuid": "d50914b5-bcee-4be9-91d6-2b483e286432",
+  "scaleFactor": 1,
+  "boneCount": 65,
+  "precomputeJointMatrix": false,
+  "animationFrameRate": 30,
+  "subMetas": {
+    "buffer.bin": {
+      "ver": "1.0.0",
+      "uuid": "06ff2042-78b6-48f3-8da3-67499ce44065",
+      "subMetas": {}
+    },
+    "Kachujin.mesh": {
+      "ver": "1.0.1",
+      "uuid": "377125fc-1388-4529-8673-9581a8774490",
+      "verts": 7665,
+      "tris": 12610,
+      "submeshes": 1,
+      "minPos": {
+        "x": -0.969268798828125,
+        "y": 0.0051129418425262,
+        "z": -0.217174977064133
+      },
+      "maxPos": {
+        "x": 0.968413889408112,
+        "y": 2.08256077766418,
+        "z": 0.176307782530785
+      },
+      "subMetas": {}
+    },
+    "woman@macarena-0.skeleton": {
+      "ver": "1.0.1",
+      "uuid": "27be406f-eec5-4d88-b827-e016dba92962",
+      "subMetas": {}
+    },
+    "macarena.sac": {
+      "ver": "1.0.1",
+      "uuid": "d0ba946c-fdbd-4215-8e75-6d67bc6ff406",
+      "modelUuid": "d50914b5-bcee-4be9-91d6-2b483e286432",
+      "animationID": 0,
+      "name": "macarena",
+      "maxFrameCount": 198,
+      "totalFrameCount": 8870,
+      "duration": 8.208333015441895,
+      "animationFrameRate": 30,
+      "subMetas": {}
+    },
+    "woman@macarena.prefab": {
+      "ver": "1.1.0",
+      "uuid": "125e4291-ebbf-4efa-a8de-bef6a0dc2724",
+      "optimizationPolicy": "AUTO",
+      "asyncLoadAssets": false,
+      "readonly": true,
+      "content": [
+        {
+          "__type__": "cc.Prefab",
+          "_name": "",
+          "_objFlags": 0,
+          "data": {
+            "__id__": 1
+          }
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Sprite",
+          "_objFlags": 0,
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_cascadeOpacityEnabled": true,
+          "_parent": null,
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 40,
+            "height": 36
+          },
+          "_children": [],
+          "_rotationX": 0,
+          "_rotationY": 0,
+          "_scaleX": 1,
+          "_scaleY": 1,
+          "_position": {
+            "__type__": "cc.Vec2",
+            "x": 0,
+            "y": 0
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_localZOrder": 0,
+          "_globalZOrder": 0,
+          "_tag": -1,
+          "_opacityModifyRGB": false,
+          "_reorderChildDirty": false,
+          "_id": "",
+          "_active": true,
+          "_components": [
+            {
+              "__id__": 2
+            }
+          ],
+          "_prefab": {
+            "__id__": 3
+          }
+        },
+        {
+          "__type__": "cc.Sprite",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 1
+          },
+          "_enabled": true,
+          "_spriteFrame": {
+            "__uuid__": "8cdb44ac-a3f6-449f-b354-7cd48cf84061"
+          },
+          "_type": 0,
+          "_sizeMode": 1,
+          "_fillType": 0,
+          "_fillCenter": {
+            "__type__": "cc.Vec2",
+            "x": 0,
+            "y": 0
+          },
+          "_fillStart": 0,
+          "_fillRange": 0,
+          "_isTrimmedMode": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_atlas": null
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": null,
+          "fileId": "d7118yAG5lKybkFOAh8koPL"
+        }
+      ],
+      "subMetas": {}
+    },
+    "kachujin_MAT.mtl": {
+      "ver": "1.0.2",
+      "uuid": "dd83c834-9e75-4064-95c7-81cb1edf9353",
+      "dataAsSubAsset": null,
+      "name": "kachujin_MAT.mtl",
+      "subMetas": {}
+    }
+  }
+}

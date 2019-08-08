@@ -1,0 +1,161 @@
+{
+  "ver": "1.0.14",
+  "uuid": "5b6f56e4-12c3-4837-ada3-f5d95b64da8c",
+  "scaleFactor": 1,
+  "boneCount": 65,
+  "precomputeJointMatrix": false,
+  "animationFrameRate": 30,
+  "subMetas": {
+    "buffer.bin": {
+      "ver": "1.0.0",
+      "uuid": "682c47d1-8262-44a5-854a-fb89f502009e",
+      "subMetas": {}
+    },
+    "Kachujin.mesh": {
+      "ver": "1.0.1",
+      "uuid": "b219013f-ccfc-4e95-b2e7-ad25ebe237b3",
+      "verts": 7665,
+      "tris": 12610,
+      "submeshes": 1,
+      "minPos": {
+        "x": -0.969268798828125,
+        "y": 0.0051129418425262,
+        "z": -0.217174977064133
+      },
+      "maxPos": {
+        "x": 0.968413889408112,
+        "y": 2.08256077766418,
+        "z": 0.176307782530785
+      },
+      "subMetas": {}
+    },
+    "women-0.skeleton": {
+      "ver": "1.0.1",
+      "uuid": "f07b1715-ba31-455e-97a8-765e5cb8eeb9",
+      "subMetas": {}
+    },
+    "mixamo.com.sac": {
+      "ver": "1.0.1",
+      "uuid": "1772877e-0265-4916-bde7-305f27e65a72",
+      "modelUuid": "5b6f56e4-12c3-4837-ada3-f5d95b64da8c",
+      "animationID": 0,
+      "name": "mixamo.com",
+      "maxFrameCount": 437,
+      "totalFrameCount": 22558,
+      "duration": 18.16666603088379,
+      "animationFrameRate": 30,
+      "subMetas": {}
+    },
+    "women.prefab": {
+      "ver": "1.1.0",
+      "uuid": "5b704149-e291-4adc-9839-f5bbedaa9ed9",
+      "optimizationPolicy": "AUTO",
+      "asyncLoadAssets": false,
+      "readonly": true,
+      "content": [
+        {
+          "__type__": "cc.Prefab",
+          "_name": "",
+          "_objFlags": 0,
+          "data": {
+            "__id__": 1
+          }
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Sprite",
+          "_objFlags": 0,
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_cascadeOpacityEnabled": true,
+          "_parent": null,
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 40,
+            "height": 36
+          },
+          "_children": [],
+          "_rotationX": 0,
+          "_rotationY": 0,
+          "_scaleX": 1,
+          "_scaleY": 1,
+          "_position": {
+            "__type__": "cc.Vec2",
+            "x": 0,
+            "y": 0
+          },
+          "_skewX": 0,
+          "_skewY": 0,
+          "_localZOrder": 0,
+          "_globalZOrder": 0,
+          "_tag": -1,
+          "_opacityModifyRGB": false,
+          "_reorderChildDirty": false,
+          "_id": "",
+          "_active": true,
+          "_components": [
+            {
+              "__id__": 2
+            }
+          ],
+          "_prefab": {
+            "__id__": 3
+          }
+        },
+        {
+          "__type__": "cc.Sprite",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 1
+          },
+          "_enabled": true,
+          "_spriteFrame": {
+            "__uuid__": "8cdb44ac-a3f6-449f-b354-7cd48cf84061"
+          },
+          "_type": 0,
+          "_sizeMode": 1,
+          "_fillType": 0,
+          "_fillCenter": {
+            "__type__": "cc.Vec2",
+            "x": 0,
+            "y": 0
+          },
+          "_fillStart": 0,
+          "_fillRange": 0,
+          "_isTrimmedMode": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_atlas": null
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": null,
+          "fileId": "d7118yAG5lKybkFOAh8koPL"
+        }
+      ],
+      "subMetas": {}
+    },
+    "kachujin_MAT.mtl": {
+      "ver": "1.0.2",
+      "uuid": "045a5d34-dc24-436e-b66b-c15b973c820d",
+      "dataAsSubAsset": null,
+      "name": "kachujin_MAT.mtl",
+      "subMetas": {}
+    }
+  }
+}
