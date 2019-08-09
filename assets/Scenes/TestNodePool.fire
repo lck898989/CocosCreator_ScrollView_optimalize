@@ -287,6 +287,9 @@
     "enemyPrefab": {
       "__uuid__": "73f62ab2-6255-4186-b1d7-eeb051f09464"
     },
+    "motionPrefab": {
+      "__uuid__": "a862dbb7-dbdf-4fe9-bd7d-a66b3f115962"
+    },
     "_id": "6aoTQHutlI3LxfL8mfcLkV"
   },
   {

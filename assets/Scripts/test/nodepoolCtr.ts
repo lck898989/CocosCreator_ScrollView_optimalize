@@ -6,19 +6,31 @@ export default class nodepoolCtr extends cc.Component {
         type: cc.Prefab
     })
     enemyPrefab: cc.Prefab = null;
+    @property({
+        type: cc.Prefab
+    })
+    motionPrefab: cc.Prefab = null;
     // @property({
     //     type: cc.Node
     // })
     // poolRoot: cc.Node = null;
     private pool: cc.NodePool = null;
+    private motionPool: cc.NodePool = null;
     onLoad () {
         this.pool = new cc.NodePool("NodeItem");
+        this.motionPool = new cc.NodePool();
         let count: number = 10;
         for(let i = 0; i < count; i++) {
             let enemyItem: cc.Node = cc.instantiate(this.enemyPrefab);
             // 放入对象池待使用
             this.pool.put(enemyItem);
             enemyItem.addComponent("NodeItem");
+        }
+        for(let i = 0; i < count; i++) {
+            let enemyItem: cc.Node = cc.instantiate(this.motionPrefab);
+            // 放入对象池待使用
+            this.motionPool.put(enemyItem);
+            // enemyItem.addComponent("NodeItem");
         }
     }
     async start () {
@@ -34,15 +46,16 @@ export default class nodepoolCtr extends cc.Component {
             console.log("i is ",i);
             if(self.pool.size() > 0) {
                 let nodeItem: cc.Node = self.pool.get();
+                if(nodeItem) {
+                    nodeItem = cc.instantiate(this.enemyPrefab)
+                }
                 // 重置该节点的坐标
                 nodeItem.x = 0;
                 nodeItem.y = 0;
-                self.node.addComponent(cc.ParticleSystem);
-                self.node.addComponent(cc.MotionStreak);
-                
-
+                // self.node.addComponent(cc.ParticleSystem);
+                // self.node.addComponent(cc.MotionStreak);
                 // 设置拖尾效果和粒子效果
-                self.node.getComponent(cc.ParticleSystem).file = ""
+                // self.node.getComponent(cc.ParticleSystem).file = ""
                 self.node.addChild(nodeItem);
                 // 向屏幕外运动
                 cc.tween(nodeItem).to(2,{
@@ -51,10 +64,35 @@ export default class nodepoolCtr extends cc.Component {
                 },{progress: null,easing: "easeInOut"}).call(() => {
                     self.pool.put(nodeItem);
                 }).start();
+
+            }
+            await new Promise((resolve,reject) => {
+                setTimeout(() => {
+                    console.log("一秒时间到");
+                    resolve();
+                },500);
+            })
+            console.log("pool's size is ",self.motionPool.size());
+            console.log("i is ",i);
+            if(self.motionPool.size() > 0) {
+                let nodeItem: cc.Node = self.motionPool.get();
+                // 重置该节点的坐标
+                nodeItem.x = 0;
+                nodeItem.y = 0;
+                // 设置拖尾效果和粒子效果
+                // self.node.getComponent(cc.ParticleSystem).file = ""
+                self.node.addChild(nodeItem);
+                // 向屏幕外运动
+                cc.tween(nodeItem).to(2,{
+                    x: 700,
+                    y: 0
+                },{progress: null,easing: "easeInOut"}).call(() => {
+                    self.motionPool.put(nodeItem);
+                }).start();
             }
         }
     }
     update (dt) {
-        // for(let i = 0; i < )
+        
     }
 }
