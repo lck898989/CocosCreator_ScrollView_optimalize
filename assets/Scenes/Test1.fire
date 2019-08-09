@@ -492,7 +492,7 @@
         "__id__": 11
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 0,
     "_components": [
       {
@@ -1002,7 +1002,7 @@
     },
     "totalCount": 1000,
     "spacing": 25,
-    "spawnCount": 20,
+    "spawnCount": 18,
     "_id": "cduIIgbcJPXKTkWzgib7yv"
   }
 ]
