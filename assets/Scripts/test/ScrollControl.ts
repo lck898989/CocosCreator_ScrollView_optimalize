@@ -1,10 +1,15 @@
 const {ccclass, property} = cc._decorator;
+const renderEngine = cc.renderer.renderEngine;
 @ccclass
 export default class NewClass extends cc.Component {
     @property({
         type: cc.ScrollView
     })
     scroll: cc.ScrollView = null;
+    @property({
+        type: cc.Node
+    })
+    cao: cc.Node = null;
     @property({
         type: cc.Prefab
     })
