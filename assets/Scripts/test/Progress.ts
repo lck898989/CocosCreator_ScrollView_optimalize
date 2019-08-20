@@ -6,11 +6,19 @@ export default class Progress extends cc.Component {
     private progressComponent: cc.ProgressBar = null;
     private sceneLoaded: boolean = false;
     private loadRate: number = 0;
+    @property({
+        type: cc.Node
+    })
+    neverNode: cc.Node = null;
     onLoad () {
         
     }
 
     start () {
+        // 绑定常驻节点
+        if(this.neverNode) {
+            cc.game.addPersistRootNode(this.neverNode);
+        }
         this.progressComponent = this.node.getComponent(cc.ProgressBar);
         cc.director.preloadScene("ThreeD",this.sceneLoadProgress.bind(this),null);
         console.log("渲染引擎是：",cc.renderer.renderEngine);

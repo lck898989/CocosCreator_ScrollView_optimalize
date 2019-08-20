@@ -1,0 +1,3 @@
+window.global = {
+    close: false
+}
