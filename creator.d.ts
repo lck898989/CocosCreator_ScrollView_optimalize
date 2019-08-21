@@ -1965,7 +1965,6 @@ declare namespace cc {
 		*/
 		tween(target?: any): Tween;	
 	}	
-	export function tween(target: any): Tween;
 	/** !#en Class for animation data handling.
 	!#zh 动画剪辑，用于存储动画数据。 */
 	export class AnimationClip extends Asset {		

@@ -19,7 +19,7 @@ export default class NewClass extends cc.Component {
     public goNextScene(data,event): void {
         console.log("data is ",data);
         console.log("event is ",event);
-        cc.director.loadScene("Test1");
+        cc.director.loadScene("test");
     }
     update (dt) {
         this.time += dt;

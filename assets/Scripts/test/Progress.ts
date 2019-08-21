@@ -33,7 +33,7 @@ export default class Progress extends cc.Component {
             this.node.getChildByName("lizi").x = this.loadRate * this.progressComponent.node.width;
             if(this.loadRate === 1) {
                 if(!this.sceneLoaded) {
-                    cc.director.loadScene("ThreeD");
+                    // cc.director.loadScene("ThreeD");
                     this.sceneLoaded = true;
                 }
             }
