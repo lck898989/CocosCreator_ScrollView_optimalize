@@ -382,7 +382,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 280,
+      "width": 160,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -427,8 +427,8 @@
     "_enabled": true,
     "_materials": [],
     "_useOriginalSize": false,
-    "_string": "跳转下一个场景",
-    "_N$string": "跳转下一个场景",
+    "_string": "回到主页",
+    "_N$string": "回到主页",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,

@@ -64,7 +64,9 @@ export default class NewClass extends cc.Component {
     start () {
 
     }
-
+    back(): void {
+        cc.director.loadScene("TestNodePool");
+    }
     update (dt) {
         this.timeFrame += dt;
         // 帧时间小于0.2不执行update提高性能

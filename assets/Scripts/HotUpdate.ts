@@ -1,12 +1,3 @@
-// Learn TypeScript:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/typescript.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
-// Learn Attribute:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 
 const {ccclass, property} = cc._decorator;
 
@@ -95,12 +86,13 @@ export default class NewClass extends cc.Component {
                 this.am.setEventCallback(this.checkCallback.bind(this));
                 this.am.checkUpdate();
             } else {
-                this.oupPut.string = "no state of native plateform";
+                this.oupPut.string = "up to date";
             }
         }
     }
     // 检查更新的回调函数
     private checkCallback(event: any): void {
+        let self = this;
         console.log("code is ",event.getEventCode());
         this.oupPut.string = "===>>>> checking over";
         switch(event.getEventCode()) {
@@ -113,6 +105,7 @@ export default class NewClass extends cc.Component {
                 break;
             case jsb.EventAssetsManager.ALREADY_UP_TO_DATE:
                 this.oupPut.string = "Alread up to date with the latest remote version";
+                self.node.active = false;
                 break;
             case jsb.EventAssetsManager.NEW_VERSION_FOUND:
                 this.oupPut.string = "NEW version found,please try to update";
@@ -148,6 +141,11 @@ export default class NewClass extends cc.Component {
             case jsb.EventAssetsManager.UPDATE_PROGRESSION:
                 this.fileProgress.progress = event.getPercentByFile();
                 this.fileLabel.string = event.getDownloadedFiles() + " / " + event.getTotalFiles();
+                let rate = event.getDownloadedFiles() / event.getTotalFiles();
+                if(rate >= 1) {
+                    this.node.active = false;
+                    // cc.director.loadScene("New");
+                }
                 let message = event.getMessage();
                 if(message) {
                     this.oupPut.string = "Update file: " + message;
@@ -187,7 +185,10 @@ export default class NewClass extends cc.Component {
             Array.prototype.unshift.apply(searchPaths,newPaths);
             console.log("searchPaths is ",searchPaths);
             console.log("newPaths is ",newPaths);
-
+            cc.sys.localStorage.setItem("HotUpdateSearchPaths",JSON.stringify(searchPaths));
+            jsb.fileUtils.setSearchPaths(searchPaths);
+            // 重启游戏
+            cc.game.restart();
         }
     }
     update (dt) {

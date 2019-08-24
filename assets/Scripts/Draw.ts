@@ -48,6 +48,9 @@ export default class NewClass extends cc.Component {
             })
         }
     }
+    back(): void {
+        cc.director.loadScene("TestNodePool");
+    }
     // 根据变化绘制线段和贝塞尔曲线
     private drawLineByChange(e: cc.Event): void {
         // let position: cc.Vec2 = e.getLocation();
