@@ -2,7 +2,7 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class Never extends cc.Component {
     private showClose: boolean = false;
     onLoad () {}
 
@@ -19,14 +19,5 @@ export default class NewClass extends cc.Component {
         return res;
     }
     update (dt) {
-        // console.log("=======");
-        // console.log("window[global] is ",window["global"]);
-        // if(window["global"] && window["global"].close && !this.showClose) {
-        //     console.log("关闭===");
-        //     // this.showClose = true;
-        //     // let closeNode: cc.Node = this.node.getChildByName("close");
-        //     // closeNode.active = true;
-        //     // this.node.getChildByName("close").active = true;
-        // }
     }
 }

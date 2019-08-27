@@ -3,7 +3,7 @@ import Actions from "./Actions";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class Draw extends cc.Component {
     
     @property([Actions])
     actions: Actions[] = []

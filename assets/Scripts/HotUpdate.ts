@@ -2,7 +2,7 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class HotUpdate extends cc.Component {
     @property({
         type: cc.ProgressBar
     })

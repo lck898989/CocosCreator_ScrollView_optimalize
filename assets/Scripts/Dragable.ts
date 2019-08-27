@@ -1,7 +1,7 @@
 const {ccclass, property} = cc._decorator;
 // 可以拖动的类
 @ccclass
-export default class NewClass extends cc.Component {
+export default class Dragable extends cc.Component {
 
     // LIFE-CYCLE CALLBACKS:
 
