@@ -34,6 +34,8 @@ export default class NewClass extends cc.Component {
     private am: any;
     private storagePath: string;
     onLoad () {
+        console.log("xy is ",this.node.parent.x.toString() + this.node.parent.y.toString());
+        this.oupPut.string = this.node.parent.x.toString() + this.node.parent.y.toString();
         if(!cc.sys.isNative) {
             return;
         }
@@ -48,10 +50,6 @@ export default class NewClass extends cc.Component {
                 console.log("storegePaht is ",this.storagePath);
                 this.am = new jsb.AssetsManager("",this.storagePath);
                 console.log("am is ",this.am);
-                // this.am.setVerifyCallback((path,asset) => {
-                //     console.log("path is ",path);
-                //     console.log("asset is ",asset);
-                // })
             } catch(e) {
                 console.log("e is ",e);
             }

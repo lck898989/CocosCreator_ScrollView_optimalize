@@ -1,22 +1,24 @@
-// Learn TypeScript:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/typescript.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
-// Learn Attribute:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class IndexControll extends cc.Component {
 
     // LIFE-CYCLE CALLBACKS:
-
-    onLoad () {}
-
+    @property({
+        type: cc.Node
+    })
+    back: cc.Node = null;
+    @property({
+        type: cc.Node
+    })
+    neverNode: cc.Node = null;
+    onLoad () {
+        this.back.on("touchstart",this.tapBack.bind(this));
+    }
+    tapBack() {
+        let self = this;
+        self.neverNode.active = false;
+    }
     start () {
 
     }
@@ -32,5 +34,7 @@ export default class NewClass extends cc.Component {
     goNew(): void {
         cc.director.loadScene("New");
     }
-    update (dt) {}
+    update (dt) {
+        
+    }
 }
