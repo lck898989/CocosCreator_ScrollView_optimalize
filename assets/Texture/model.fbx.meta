@@ -70,7 +70,7 @@
       "subMetas": {}
     },
     "model.prefab": {
-      "ver": "1.1.0",
+      "ver": "1.2.0",
       "uuid": "488484ee-9705-406e-9f64-cfe5ded1062d",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,

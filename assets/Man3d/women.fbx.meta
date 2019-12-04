@@ -47,7 +47,7 @@
       "subMetas": {}
     },
     "women.prefab": {
-      "ver": "1.1.0",
+      "ver": "1.2.0",
       "uuid": "5b704149-e291-4adc-9839-f5bbedaa9ed9",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,

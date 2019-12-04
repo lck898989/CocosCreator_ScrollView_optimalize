@@ -47,7 +47,7 @@
       "subMetas": {}
     },
     "woman@macarena.prefab": {
-      "ver": "1.1.0",
+      "ver": "1.2.0",
       "uuid": "125e4291-ebbf-4efa-a8de-bef6a0dc2724",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,

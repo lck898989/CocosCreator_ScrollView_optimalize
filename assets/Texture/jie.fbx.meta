@@ -30,7 +30,7 @@
       "subMetas": {}
     },
     "jie.prefab": {
-      "ver": "1.1.0",
+      "ver": "1.2.0",
       "uuid": "572097bd-f975-4ca3-9b9c-b6f8a7ace486",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,

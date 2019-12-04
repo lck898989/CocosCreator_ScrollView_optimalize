@@ -47,7 +47,7 @@
       "subMetas": {}
     },
     "MANTA2.prefab": {
-      "ver": "1.1.0",
+      "ver": "1.2.0",
       "uuid": "3c7ad714-2987-43b4-8cee-a457ff7c5da4",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,

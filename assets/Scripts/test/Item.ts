@@ -28,7 +28,6 @@ export default class Item extends cc.Component {
     }
     setAvatar(url: string): void {
         let self = this;
-        console.log("url is ",url);
         if(url) {
             cc.loader.loadRes(url,cc.SpriteFrame,(err,data) => {
                 self.node.getChildByName("avatar").getComponent(cc.Sprite).spriteFrame = data;

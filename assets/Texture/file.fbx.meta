@@ -30,7 +30,7 @@
       "subMetas": {}
     },
     "file.prefab": {
-      "ver": "1.1.0",
+      "ver": "1.2.0",
       "uuid": "ca5634f8-7854-416a-9a4f-ec032b135a30",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,

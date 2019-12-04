@@ -43,6 +43,7 @@ export default class NewClass extends cc.Component {
         this.content = this.scroll.content;
         console.log("content is ",this.content);
         console.log("content's parent is ",this.content.parent);
+        console.log("spawnCount is ",this.spawnCount);
         this.content.height = this.totalCount * this.itemPrefab.data.height + this.totalCount * this.spacing + this.spacing;
         this.topY = 0;
         this.bottomY = -this.content.height;
@@ -68,6 +69,11 @@ export default class NewClass extends cc.Component {
         cc.director.loadScene("TestNodePool");
     }
     update (dt) {
+        /**
+         * 
+         * update 方法中尽量不用console.log() cc.log()等打印信息等一部操作
+         * 
+         */
         this.timeFrame += dt;
         // 帧时间小于0.2不执行update提高性能
         if(this.timeFrame < this.timeInterval) {
@@ -96,11 +102,13 @@ export default class NewClass extends cc.Component {
                 } else {
                     item.getComponent("Item").setAvatar("2.jpg");
                 }
-            } else if((itemNodePosition.y < -(this.scroll.node.height / 2 + item.height + this.spacing )) && !isDown){
+            } else if((itemNodePosition.y <= -(this.scroll.node.height / 2 + item.height + this.spacing )) && !isDown){
                 if(item.getComponent("Item").itemId - this.items.length >= 0) {
-                    console.log("有节点超出了下边界",i);
-                    item.y -= offset;
+                    // console.log("有节点超出了下边界",i);
+                    item.y = item.y - offset;
+                    // 设置id信息
                     item.getComponent("Item").setItemId(item.getComponent("Item").itemId - this.items.length);
+                    // 设置字符串信息
                     item.getComponent("Item").setScore("" + item.getComponent("Item").itemId);
                 }
             }
